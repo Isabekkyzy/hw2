@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Header from './components/Header';
+
+
+const headerData = {
+  author: {
+    name: 'Kitty',
+    avatarUrl:'https://mixmag.io/wp-content/pics/93055/image009-98-720x720.jpg',
+  
+  },
+  text: 'hi how are you 🧡',
+    date: new Date(),
+ 
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Header
+    name={headerData.author} 
+    author={headerData.author}
+    text={headerData.text}
+    date={headerData.date.toString()}/>
     </div>
   );
 }
